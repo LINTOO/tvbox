@@ -32,7 +32,7 @@ def main():
                 .replace('"https://github.com', '"' + reList[reI]) \
                 .replace("'https://raw.githubusercontent.com", "'" + reList[reI]) \
                 .replace('"https://raw.githubusercontent.com', '"' + reList[reI])
-            fp = open("./tv/" + str(reI) + "/" + urlName + ".json", "w+", encoding='utf-8')
+            fp = open("./" + str(reI) + "/" + urlName + ".json", "w+", encoding='utf-8')
             fp.write(reqText)
 
     collectionJson = {
