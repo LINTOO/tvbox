@@ -12,12 +12,9 @@ def main():
     with open('./url.json', 'r', encoding='utf-8') as f:
         urlJson = json.load(f)
     nameList = []
-    reList = ["https://ghproxy.net/https://raw.githubusercontent.com", "https://raw.kkgithub.com",
-              "https://gcore.jsdelivr.net/gh", "https://mirror.ghproxy.com/https://raw.githubusercontent.com",
-              "https://github.moeyy.xyz/https://raw.githubusercontent.com", "https://fastly.jsdelivr.net/gh"]
-    reRawList = [False, False,
-                 True, False,
-                 False, True]
+    reList = ["https://ghproxy.net/https://raw.githubusercontent.com",
+              "https://gcore.jsdelivr.net/gh", ]
+    reRawList = [False,True]
     for item in urlJson:
         urlData = get_json(item["url"])
         for reI in range(len(reList)):
