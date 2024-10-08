@@ -47,7 +47,7 @@ def main():
             collectionJson["urls"].append(urlItem)
     collectionJson_data = json.dumps(collectionJson, ensure_ascii=False, indent=4)
     for reI in range(len(reList)):
-        fp = open("./tv/" + str(reI) + "/collection.json", "w+", encoding='utf-8')
+        fp = open("./" + str(reI) + "/collection.json", "w+", encoding='utf-8')
         fp.write(collectionJson_data)
 
     now = datetime.datetime.now()
